@@ -21,6 +21,9 @@
         "system": [
         ]
     },
+    "no-auth-pages": [
+        "test"
+    ],
     "system-settings": [
     ],
     "project-settings": [

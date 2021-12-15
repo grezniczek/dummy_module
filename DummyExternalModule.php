@@ -11,7 +11,7 @@ class DummyExternalModule extends AbstractExternalModule {
 
     public function redcap_every_page_top($project_id) {
 
-        $jsUrl = $this->getUrl("js/test.js");
+        $jsUrl = $this->getSurveyEndpointUrl("js/test.js");
 
         print "<script type=\"text/javascript\" src=\"{$jsUrl}\"></script>";
         
