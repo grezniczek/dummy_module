@@ -17,8 +17,12 @@ class DummyExternalModule extends AbstractExternalModule {
         // $js_url_api = $this->getApiEndpointUrl("js/test_api.js");
         // print "<script type=\"text/javascript\" src=\"{$js_url_api}\"></script>";
         
-        $js_url_langswitch = $this->getApiEndpointUrl("js/test_langswitch.js");
+        $this->initializeJavascriptModuleObject();
+        $jsmo_name = $this->getJavascriptModuleObjectName();
+
+        $js_url_langswitch = $this->getUrl("js/test_langswitch.js");
         print "<script type=\"text/javascript\" src=\"{$js_url_langswitch}\"></script>";
+        print "<script>window.DE_RUB_DummyExternalModule.init({$jsmo_name});</script>";
 
     }
 
