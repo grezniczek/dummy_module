@@ -1,0 +1,1 @@
+console.log('Lang switch detector loaded ...')
