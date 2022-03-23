@@ -25,6 +25,16 @@
         "test"
     ],
     "system-settings": [
+        {
+            "key": "test-afterrender",
+            "name": "Test <b>afterRender</b> function of JavascriptModuleObject",
+            "type": "checkbox"
+        },
+        {
+            "key": "test-setsystemsetting",
+            "name": "Test <b>setSystemSetting</b> framework function",
+            "type": "checkbox"
+        }
     ],
     "project-settings": [
     ],
