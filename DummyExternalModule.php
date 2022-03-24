@@ -32,7 +32,7 @@ class DummyExternalModule extends AbstractExternalModule {
             $new = $this->getSystemSetting("test");
             ?>
             <script>
-                console.log('Set System Value Test: Original = "<?=json_encode($orig)?>", New = "<?=json_encode($new)?>".');
+                console.log('Set System Value Test: Original = <?=json_encode($orig)?>, New = <?=json_encode($new)?>.');
             </script>
             <?php
         }
