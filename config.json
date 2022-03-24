@@ -34,6 +34,11 @@
             "key": "test-setsystemsetting",
             "name": "Test <b>setSystemSetting</b> framework function",
             "type": "checkbox"
+        },
+        {
+            "key": "test-setprojectsetting",
+            "name": "Test <b>setProjectSetting</b> framework function",
+            "type": "checkbox"
         }
     ],
     "project-settings": [

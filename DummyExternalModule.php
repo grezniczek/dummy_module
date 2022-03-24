@@ -27,14 +27,29 @@ class DummyExternalModule extends AbstractExternalModule {
         }
 
         if ($this->getSystemSetting("test-setsystemsetting") == 1) {
-            $orig = $this->getSystemSetting("test");
-            $this->setSystemSetting("test", $project_id == null ? "System value" : "Project {$project_id} value");
-            $new = $this->getSystemSetting("test");
+            $key = "test";
+            $orig = $this->getSystemSetting($key);
+            $this->setSystemSetting($key, $project_id == null ? "System value" : "Project {$project_id} value");
+            $new = $this->getSystemSetting($key);
             ?>
             <script>
                 console.warn('Set System Value Test: Original = <?=json_encode($orig)?>, New = <?=json_encode($new)?>.');
             </script>
             <?php
         }
+
+        if ($project_id != null && $this->getSystemSetting("test-setprojectsetting") == 1) {
+            $key = "p-test";
+            $orig = $this->getProjectSetting($key) ?? 0;
+            $orig = is_numeric($orig) ? $orig * 1 : 0;
+            $this->setProjectSetting($key, $orig + 1);
+            $new = $this->getProjectSetting($key);
+            ?>
+            <script>
+                console.warn('Set Project Value Test: Original = <?=json_encode($orig)?>, New = <?=json_encode($new)?>.');
+            </script>
+            <?php
+        }
+
     }
 }
