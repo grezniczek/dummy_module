@@ -10,7 +10,7 @@
             "institution": "Ruhr-Universität Bochum"
         }
     ],
-    "framework-version": 8,
+    "framework-version": 10,
     "permissions": [
         "redcap_every_page_top"
     ],
@@ -18,11 +18,20 @@
     "links": {
         "project": [
         ],
-        "system": [
+        "control-center": [
+            {
+                "name": "AJAX Test",
+                "key": "sys-ajax",
+                "url": "ajax.php",
+                "show-header-and-footer": true
+            }
         ]
     },
     "no-auth-pages": [
         "test"
+    ],
+    "auth-ajax-actions": [
+        "ajax-test"
     ],
     "system-settings": [
         {

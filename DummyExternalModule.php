@@ -9,7 +9,13 @@ use ExternalModules\AbstractExternalModule;
  */
 class DummyExternalModule extends AbstractExternalModule {
 
+    public function redcap_module_link_check_display($project_id, $link) {
+        return $link;
+    }
+
     public function redcap_every_page_top($project_id) {
+
+        return;
 
         // $js_url_survey = $this->getSurveyEndpointUrl("js/test_survey.js");
         // print "<script type=\"text/javascript\" src=\"{$js_url_survey}\"></script>";
@@ -51,5 +57,11 @@ class DummyExternalModule extends AbstractExternalModule {
             <?php
         }
 
+    }
+
+
+    public function redcap_module_ajax($action, $payload, $project_id, $record, $instrument, $event_id, $repeat_instance, $survey_hash, $response_id, $survey_queue_hash, $page, $page_full, $user_id, $group_id) {
+
+        return "It works! " . NOW;
     }
 }
